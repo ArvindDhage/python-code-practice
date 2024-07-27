@@ -1,0 +1,111 @@
+# 1. List Operations
+my_list = [10, 20, 30, 40, 50]
+print("Original List:", my_list)
+
+# Append an element
+my_list.append(60)
+print("List after appending 60:", my_list)
+
+# Remove an element
+my_list.remove(30)
+print("List after removing 30:", my_list)
+
+# Access an element
+print("Element at index 2:", my_list[2])
+
+# Iterate through the list
+print("Iterating through list:")
+for item in my_list:
+    print(item)
+
+# 2. Dictionary Operations
+my_dict = {'name': 'Alice', 'age': 25, 'city': 'New York'}
+print("\nOriginal Dictionary:", my_dict)
+
+# Add a key-value pair
+my_dict['profession'] = 'Engineer'
+print("Dictionary after adding profession:", my_dict)
+
+# Update a value
+my_dict['age'] = 26
+print("Dictionary after updating age:", my_dict)
+
+# Access a value
+print("Age:", my_dict['age'])
+
+# Iterate through dictionary
+print("Iterating through dictionary:")
+for key, value in my_dict.items():
+    print(f"{key}: {value}")
+
+# 3. Set Operations
+my_set = {1, 2, 3, 4, 5}
+print("\nOriginal Set:", my_set)
+
+# Add an element
+my_set.add(6)
+print("Set after adding 6:", my_set)
+
+# Remove an element
+my_set.remove(3)
+print("Set after removing 3:", my_set)
+
+# Check membership
+print("Is 4 in set?", 4 in my_set)
+
+# Iterate through the set
+print("Iterating through set:")
+for item in my_set:
+    print(item)
+
+# 4. Tuple Operations
+my_tuple = (10, 20, 30, 40)
+print("\nOriginal Tuple:", my_tuple)
+
+# Access an element
+print("Element at index 1:", my_tuple[1])
+
+# Iterate through the tuple
+print("Iterating through tuple:")
+for item in my_tuple:
+    print(item)
+
+# 5. Nested Data Structure Example
+nested_list = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+print("\nNested List:")
+for sublist in nested_list:
+    for item in sublist:
+        print(item, end=" ")
+print()
+
+# Using a list comprehension to flatten the nested list
+flat_list = [item for sublist in nested_list for item in sublist]
+print("Flattened List:", flat_list)
+
+# 6. Using List Comprehension to Filter Even Numbers
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+even_numbers = [num for num in numbers if num % 2 == 0]
+print("\nEven Numbers:", even_numbers)
+
+# 7. Dictionary Comprehension to Square Numbers
+squares = {x: x**2 for x in range(1, 6)}
+print("\nSquares Dictionary:", squares)
+
+# 8. Set Comprehension to Get Unique Characters
+string = "hello world"
+unique_chars = {char for char in string}
+print("\nUnique Characters in String:", unique_chars)
+
+# 9. Tuple Unpacking
+coordinates = (10, 20)
+x, y = coordinates
+print(f"\nCoordinates: x={x}, y={y}")
+
+# 10. Using a Default Dictionary
+from collections import defaultdict
+
+dd = defaultdict(int)
+dd['apple'] += 1
+dd['banana'] += 2
+dd['apple'] += 3
+print("\nDefault Dictionary:", dict(dd))
